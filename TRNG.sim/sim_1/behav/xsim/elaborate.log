@@ -1,0 +1,32 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /media/user23/data/tools/xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ro_bank_behav xil_defaultlib.tb_ro_bank xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.INV
+Compiling module xil_defaultlib.ro_cell_default
+Compiling module xil_defaultlib.ro_cell(STAGES=5)
+Compiling module xil_defaultlib.ro_cell(STAGES=7)
+Compiling module xil_defaultlib.ro_cell(STAGES=9)
+Compiling module xil_defaultlib.ro_cell(STAGES=11)
+Compiling module xil_defaultlib.ro_cell(STAGES=13)
+Compiling module xil_defaultlib.ro_cell(STAGES=15)
+Compiling module xil_defaultlib.ro_cell(STAGES=17)
+Compiling module xil_defaultlib.ro_cell(STAGES=19)
+Compiling module xil_defaultlib.ro_cell(STAGES=21)
+Compiling module xil_defaultlib.ro_cell(STAGES=23)
+Compiling module xil_defaultlib.ro_cell(STAGES=25)
+Compiling module xil_defaultlib.ro_cell(STAGES=27)
+Compiling module xil_defaultlib.ro_cell(STAGES=29)
+Compiling module xil_defaultlib.ro_cell(STAGES=31)
+Compiling module xil_defaultlib.ro_cell(STAGES=33)
+Compiling module xil_defaultlib.ro_bank_default
+Compiling module xil_defaultlib.tb_ro_bank
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ro_bank_behav

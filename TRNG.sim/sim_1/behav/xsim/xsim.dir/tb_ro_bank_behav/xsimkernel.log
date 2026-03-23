@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_ro_bank_behav/xsimk -simmode gui -wdb tb_ro_bank_behav.wdb -simrunnum 0 -socket 34345
+Design successfully loaded
+Design Loading Memory Usage: 181836 KB (Peak: 181836 KB)
+Design Loading CPU Usage: 660 ms

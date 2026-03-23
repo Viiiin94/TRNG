@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../TRNG.srcs/sources_1/new/ro_bank.v" \
+"../../../../TRNG.srcs/sources_1/new/ro_cell.v" \
+
+sv xil_defaultlib  \
+"../../../../TRNG.srcs/sim_1/new/tb_ro_bank.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
