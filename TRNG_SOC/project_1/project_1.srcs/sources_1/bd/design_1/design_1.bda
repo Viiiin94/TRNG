@@ -202,7 +202,7 @@
                 "SX": "/trng256_axi_top_0",
                 "SI": "s_axi",
                 "SS": "reg0",
-                "SV": "user.org:user:trng256_axi_top:1.0",
+                "SV": "user.org:user:trng256_axi_top:1.2",
                 "TM": "both",
                 "TU": "register"
             }

@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.srcs/constrs_1/imports/new/Zybo-Z7-Master.xdc rfile:../../../project_1.srcs/constrs_1/imports/new/Zybo-Z7-Master.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:198 export:INPUT save:INPUT read:READ} [current_design]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets -hierarchical -filter {NAME =~ "*feedback*"}]
+set_property src_info {type:XDC file:1 line:201 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path 2 -setup -from [get_cells -hierarchical -filter {NAME =~ "*u_sha256*"}] -to   [get_cells -hierarchical -filter {NAME =~ "*u_sha256*"}]
+set_property src_info {type:XDC file:1 line:207 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path 1 -hold -from [get_cells -hierarchical -filter {NAME =~ "*u_sha256*"}] -to   [get_cells -hierarchical -filter {NAME =~ "*u_sha256*"}]
