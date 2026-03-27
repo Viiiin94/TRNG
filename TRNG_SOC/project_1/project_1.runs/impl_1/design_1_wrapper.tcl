@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -106,7 +105,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
-  set_param xicom.use_bs_reader 1
   set_param bd.open.in_stealth_mode 1
   set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
@@ -119,7 +117,10 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.cache/wt [current_project]
   set_property parent.project_path /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.xpr [current_project]
-  set_property ip_repo_paths /media/user23/data/ip_repo [current_project]
+  set_property ip_repo_paths {
+  /media/user23/data/TRNG/TRNG_SOC/ip_repo/trng256_generator/myip_trng256_1_0
+  /media/user23/data/TRNG/TRNG_SOC/aes256_encrypt
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
@@ -290,35 +291,4 @@ OPTRACE "route_design write_checkpoint" END { }
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
-OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
-OPTRACE "write_bitstream setup" START { }
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-OPTRACE "read constraints: write_bitstream" START { }
-OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  catch { write_mem_info -force -no_partial_mmi design_1_wrapper.mmi }
-OPTRACE "write_bitstream setup" END { }
-OPTRACE "write_bitstream" START { }
-  write_bitstream -force design_1_wrapper.bit 
-OPTRACE "write_bitstream" END { }
-OPTRACE "write_bitstream misc" START { }
-OPTRACE "read constraints: write_bitstream_post" START { }
-OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force design_1_wrapper}
-  catch {file copy -force design_1_wrapper.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
-  unset ACTIVE_STEP 
-}
-
-OPTRACE "write_bitstream misc" END { }
-OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }

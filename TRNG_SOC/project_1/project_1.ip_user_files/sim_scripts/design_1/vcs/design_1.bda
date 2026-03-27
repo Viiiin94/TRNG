@@ -190,19 +190,55 @@
             },
             "V3": {
                 "VT": "AC",
-                "BA": "0x40000000",
-                "HA": "0x40000FFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
+                "BA": "0x42000000",
+                "HA": "0x42001FFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
                 "MA": "Data",
                 "MX": "/processing_system7_0",
                 "MI": "M_AXI_GP0",
-                "MS": "SEG_trng256_axi_top_0_reg0",
+                "MS": "SEG_axi_bram_ctrl_0_Mem0",
                 "MV": "xilinx.com:ip:processing_system7:5.5",
-                "SX": "/trng256_axi_top_0",
-                "SI": "s_axi",
-                "SS": "reg0",
-                "SV": "user.org:user:trng256_axi_top:1.2",
+                "SX": "/axi_bram_ctrl_0",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V4": {
+                "VT": "AC",
+                "BA": "0x43C00000",
+                "HA": "0x43C0FFFF",
+                "BP": "C_S00_AXI_BASEADDR",
+                "HP": "C_S00_AXI_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_aes256_encrypt_0_S00_AXI_reg",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/aes256_encrypt_0",
+                "SI": "S00_AXI",
+                "SS": "S00_AXI_reg",
+                "SV": "user.org:user:aes256_encrypt:1.2",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V5": {
+                "VT": "AC",
+                "BA": "0x43C10000",
+                "HA": "0x43C1FFFF",
+                "BP": "C_S00_AXI_BASEADDR",
+                "HP": "C_S00_AXI_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_myip_trng256_0_S00_AXI_reg",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/myip_trng256_0",
+                "SI": "S00_AXI",
+                "SS": "S00_AXI_reg",
+                "SV": "user.org:user:myip_trng256:1.0",
                 "TM": "both",
                 "TU": "register"
             }
@@ -218,6 +254,16 @@
             },
             {
                 "src": "V3",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V4",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V5",
                 "trg": "V2",
                 "EH": "2"
             }

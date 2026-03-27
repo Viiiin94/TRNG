@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/aes256_encrypt_1_0/hdl/add_round_key.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_round_key
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/aes256_encrypt_1_0/hdl/aes256_enc_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes256_enc_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/aes256_encrypt_1_0/hdl/key_expasion.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key_expasion
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/aes256_encrypt_1_0/hdl/mix_columns.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mix_columns
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/aes256_encrypt_1_0/hdl/s_box.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module s_box
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/aes256_encrypt_1_0/hdl/shift_rows.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_rows
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/aes256_encrypt_1_0/hdl/sub_bytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sub_bytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/edit_aes256_encrypt_v1_0.srcs/sim_1/new/tb_aes256_enc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_aes256_enc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user23/data/TRNG/TRNG_SOC/ip_repo/edit_aes256_encrypt_v1_0.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

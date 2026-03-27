@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Thu Mar 26 11:08:09 2026
+| Date         : Fri Mar 27 16:46:27 2026
 | Host         : user23-B80KV-AP35BKE running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -157,11 +157,13 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +---------------------------------+------+
 |             Ref Name            | Used |
 +---------------------------------+------+
-| design_1_trng256_axi_top_0_0    |    1 |
 | design_1_processing_system7_0_0 |    1 |
 | design_1_proc_sys_reset_0_0     |    1 |
-| design_1_ila_0_0                |    1 |
+| design_1_myip_trng256_0_0       |    1 |
+| design_1_blk_mem_gen_0_0        |    1 |
 | design_1_axi_smc_0              |    1 |
+| design_1_axi_bram_ctrl_0_0      |    1 |
+| design_1_aes256_encrypt_0_1     |    1 |
 +---------------------------------+------+
 
 

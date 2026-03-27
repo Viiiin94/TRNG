@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Thu Mar 26 11:11:01 2026
+| Date         : Fri Mar 27 16:48:36 2026
 | Host         : user23-B80KV-AP35BKE running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -23,736 +23,715 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 139
-+-----------+----------+---------------------------------------------+--------+
-| Rule      | Severity | Description                                 | Checks |
-+-----------+----------+---------------------------------------------+--------+
-| LUTAR-1   | Warning  | LUT drives async reset alert                | 5      |
-| TIMING-16 | Warning  | Large setup violation                       | 4      |
-| TIMING-23 | Warning  | Combinational loop found                    | 128    |
-| XDCB-5    | Warning  | Runtime inefficient way to find pin objects | 2      |
-+-----------+----------+---------------------------------------------+--------+
+             Checks found: 137
++-----------+----------+------------------------------+--------+
+| Rule      | Severity | Description                  | Checks |
++-----------+----------+------------------------------+--------+
+| LUTAR-1   | Warning  | LUT drives async reset alert | 1      |
+| TIMING-16 | Warning  | Large setup violation        | 8      |
+| TIMING-23 | Warning  | Combinational loop found     | 128    |
++-----------+----------+------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
-dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE
-dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#2 Warning
-LUT drives async reset alert  
-LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
-dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE
-dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#3 Warning
-LUT drives async reset alert  
-LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
-dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE
-dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#4 Warning
-LUT drives async reset alert  
-LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
-dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE
-dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#5 Warning
-LUT drives async reset alert  
-LUT cell design_1_i/trng256_axi_top_0/inst/u_core/u_sha256/rand_valid_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/trng256_axi_top_0/inst/u_core/rand_data_reg[95]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/rand_data_reg[96]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/rand_data_reg[97]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/rand_data_reg[98]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/rand_data_reg[99]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/rand_data_reg[9]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/rand_valid_reg/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/valid_mask_reg[0]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/valid_mask_reg[1]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/valid_mask_reg[2]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/valid_mask_reg[3]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/valid_mask_reg[4]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/valid_mask_reg[5]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/valid_mask_reg[6]/CLR,
-design_1_i/trng256_axi_top_0/inst/u_core/valid_mask_reg[7]/CLR
+LUT cell design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/rand_data[255]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/rand_data_reg[95]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/rand_data_reg[96]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/rand_data_reg[97]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/rand_data_reg[98]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/rand_data_reg[99]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/rand_data_reg[9]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/rand_valid_reg/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/valid_mask_reg[0]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/valid_mask_reg[1]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/valid_mask_reg[2]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/valid_mask_reg[3]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/valid_mask_reg[4]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/valid_mask_reg[5]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/valid_mask_reg[6]/CLR,
+design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/valid_mask_reg[7]/CLR
  (the first 15 of 1464 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.093 ns between design_1_i/trng256_axi_top_0/inst/ctrl_reset_reg_rep_replica/C (clocked by clk_fpga_0) and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.296 ns between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/ctrl_enable_reg/C (clocked by clk_fpga_0) and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.220 ns between design_1_i/trng256_axi_top_0/inst/ctrl_reset_reg_rep_replica/C (clocked by clk_fpga_0) and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.655 ns between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/ctrl_enable_reg/C (clocked by clk_fpga_0) and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.257 ns between design_1_i/trng256_axi_top_0/inst/ctrl_reset_reg_rep_replica/C (clocked by clk_fpga_0) and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.836 ns between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/ctrl_enable_reg/C (clocked by clk_fpga_0) and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.872 ns between design_1_i/trng256_axi_top_0/inst/ctrl_reset_reg_rep_replica/C (clocked by clk_fpga_0) and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.655 ns between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/ctrl_enable_reg/C (clocked by clk_fpga_0) and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -3.765 ns between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/ctrl_enable_reg/C (clocked by clk_fpga_0) and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -4.207 ns between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/ctrl_enable_reg/C (clocked by clk_fpga_0) and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -4.273 ns between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/ctrl_enable_reg/C (clocked by clk_fpga_0) and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -4.280 ns between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/ctrl_enable_reg/C (clocked by clk_fpga_0) and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/raw_bit_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-23#1 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#2 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#3 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#4 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#5 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#6 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#7 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#8 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#9 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#10 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#11 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#12 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#13 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#14 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#15 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#16 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[0].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[0].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#17 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#18 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#19 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#20 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#21 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#22 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#23 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#24 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#25 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#26 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#27 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#28 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#29 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#30 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#31 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#32 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[1].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[1].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#33 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#34 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#35 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#36 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#37 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#38 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#39 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#40 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#41 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#42 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#43 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#44 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#45 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#46 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#47 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#48 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[2].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[2].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#49 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#50 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#51 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#52 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#53 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#54 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#55 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#56 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#57 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#58 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#59 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#60 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#61 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#62 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#63 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#64 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[3].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[3].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#65 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#66 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#67 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#68 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#69 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#70 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#71 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#72 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#73 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#74 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#75 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#76 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#77 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#78 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#79 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#80 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[4].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[4].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#81 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#82 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#83 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#84 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#85 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#86 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#87 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#88 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#89 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#90 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#91 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#92 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#93 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#94 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#95 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#96 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[5].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[5].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#97 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#98 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#99 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#100 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#101 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#102 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#103 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#104 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#105 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#106 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#107 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#108 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#109 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#110 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#111 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#112 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[6].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[6].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#113 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[0].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#114 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[10].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#115 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[11].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#116 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[12].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#117 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[13].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#118 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[14].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#119 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[15].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#120 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[1].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#121 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[2].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#122 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[3].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#123 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[4].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#124 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[5].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#125 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[6].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#126 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[7].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#127 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[8].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 TIMING-23#128 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/trng256_axi_top_0/inst/u_core/g_bank[7].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
-Related violations: <none>
-
-XDCB-5#1 Warning
-Runtime inefficient way to find pin objects  
-The option '-from : [get_pins -hierarchical -filter {NAME =~ *ila_core_inst/u_trig/N_DDR_TC.N_DDR_TC_INST[*].U_TC/allx_typeA_match_detection.ltlib_v1_0_2_allx_typeA_inst/DUT/u_srl_drive/CLK}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '46' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 72)
-Related violations: <none>
-
-XDCB-5#2 Warning
-Runtime inefficient way to find pin objects  
-The option '-to : [get_pins -hierarchical -filter {NAME =~ *ila_core_inst/u_trig/N_DDR_TC.N_DDR_TC_INST[*].U_TC/yes_output_reg.dout_reg_reg/D}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '46' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 72)
+A timing loop has been detected on a combinational path. A timing arc has been disabled between design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/I1 and design_1_i/myip_trng256_0/inst/myip_trng256_slave_lite_v1_0_S00_AXI_inst/u_core/g_bank[7].u_bank/g_synth.g_ro[9].u_ro/feedback_inferred_i_1/O to disable the timing loop
 Related violations: <none>
 
 

@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../aes256_encrypt_1_0/hdl/add_round_key.v" \
+"../../../../aes256_encrypt_1_0/hdl/aes256_enc_core.v" \
+"../../../../aes256_encrypt_1_0/hdl/key_expasion.v" \
+"../../../../aes256_encrypt_1_0/hdl/mix_columns.v" \
+"../../../../aes256_encrypt_1_0/hdl/s_box.v" \
+"../../../../aes256_encrypt_1_0/hdl/shift_rows.v" \
+"../../../../aes256_encrypt_1_0/hdl/sub_bytes.v" \
+
+sv xil_defaultlib  \
+"../../../../edit_aes256_encrypt_v1_0.srcs/sim_1/new/tb_aes256_enc.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
