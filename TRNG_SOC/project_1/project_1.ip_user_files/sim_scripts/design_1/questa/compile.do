@@ -156,22 +156,29 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_19 -L smartconnec
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_34/sim/bd_afc3_m02wn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_35/sim/bd_afc3_m02bn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_36/sim/bd_afc3_m02e_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/sim/bd_afc3_m03s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/sim/bd_afc3_m03arn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/sim/bd_afc3_m03rn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_40/sim/bd_afc3_m03awn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_41/sim/bd_afc3_m03wn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_42/sim/bd_afc3_m03bn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_43/sim/bd_afc3_m03e_0.sv" \
 
 vlog -work axi_register_slice_v2_1_33 -64 -incr -mfcu  "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/86fe/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/0127/hdl/verilog" "+incdir+/media/user23/data/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include" \
 "../../../../project_1.gen/sources_1/bd/design_1/ipshared/3ee4/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/86fe/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/0127/hdl/verilog" "+incdir+/media/user23/data/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/sim/design_1_axi_smc_0.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/aes256_encrypt.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/add_round_key.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/aes256_enc_core.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/key_expasion.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/mix_columns.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/s_box.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/shift_rows.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/sub_bytes.v" \
-"../../../bd/design_1/ipshared/2b3d/hdl/key_man.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/aes256_encrypt.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/add_round_key.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/aes256_enc_core.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/key_expasion.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/mix_columns.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/s_box.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/shift_rows.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/sub_bytes.v" \
+"../../../bd/design_1/ipshared/fa0d/hdl/key_man.v" \
 "../../../bd/design_1/ip/design_1_aes256_encrypt_0_1/sim/design_1_aes256_encrypt_0_1.v" \
 
 vcom -work axi_bram_ctrl_v4_1_11 -64 -93  \
@@ -193,6 +200,14 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../project_1.gen/so
 "../../../bd/design_1/ipshared/6c3f/src/trng256_core.v" \
 "../../../bd/design_1/ipshared/6c3f/hdl/myip_trng256.v" \
 "../../../bd/design_1/ip/design_1_myip_trng256_0_0/sim/design_1_myip_trng256_0_0.v" \
+"../../../bd/design_1/ipshared/18bb/hdl/aes256_decrypt_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/18bb/hdl/aes256_dec_core.v" \
+"../../../bd/design_1/ipshared/18bb/hdl/inv_mix_columns.v" \
+"../../../bd/design_1/ipshared/18bb/hdl/inv_shift_rows.v" \
+"../../../bd/design_1/ipshared/18bb/hdl/inv_sub_bytes.v" \
+"../../../bd/design_1/ipshared/18bb/hdl/key_expansion.v" \
+"../../../bd/design_1/ipshared/18bb/hdl/aes256_decrypt.v" \
+"../../../bd/design_1/ip/design_1_aes256_decrypt_0_0/sim/design_1_aes256_decrypt_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \

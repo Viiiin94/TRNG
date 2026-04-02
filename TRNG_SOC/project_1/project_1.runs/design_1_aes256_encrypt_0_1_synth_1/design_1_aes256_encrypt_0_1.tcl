@@ -73,6 +73,7 @@ set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {/home/user23/.Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
 set_property ip_repo_paths {
+  /media/user23/data/TRNG/TRNG_SOC/aes256_decrypt/aes256_decrypt_1_0
   /media/user23/data/TRNG/TRNG_SOC/ip_repo/trng256_generator/myip_trng256_1_0
   /media/user23/data/TRNG/TRNG_SOC/aes256_encrypt
 } [current_project]

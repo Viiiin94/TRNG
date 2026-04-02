@@ -7,12 +7,13 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Fri Mar 27 16:40:48 2026
+  **** Start of session at: Thu Apr  2 14:40:23 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_aes256_encrypt_0_1.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user23/data/TRNG/TRNG_SOC/aes256_decrypt/aes256_decrypt_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user23/data/TRNG/TRNG_SOC/ip_repo/trng256_generator/myip_trng256_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user23/data/TRNG/TRNG_SOC/aes256_encrypt'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/user23/data/tools/xilinx/Vivado/2024.2/data/ip'.
@@ -24,95 +25,96 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 25515
+INFO: [Synth 8-7075] Helper process launched with PID 64824
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1891.137 ; gain = 419.797 ; free physical = 1619 ; free virtual = 37307
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1891.273 ; gain = 419.828 ; free physical = 338 ; free virtual = 39848
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_aes256_encrypt_0_1' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_aes256_encrypt_0_1/synth/design_1_aes256_encrypt_0_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'aes256_encrypt' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_encrypt.v:24]
-INFO: [Synth 8-6157] synthesizing module 'key_man' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_man.v:22]
-INFO: [Synth 8-226] default block is never used [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_man.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'key_man' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_man.v:22]
-INFO: [Synth 8-6157] synthesizing module 'aes256_enc_core' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_enc_core.v:16]
-INFO: [Synth 8-6157] synthesizing module 'key_expasion' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:17]
-INFO: [Synth 8-6157] synthesizing module 's_box' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/s_box.v:7]
-INFO: [Synth 8-6155] done synthesizing module 's_box' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/s_box.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'key_expasion' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:17]
-INFO: [Synth 8-6157] synthesizing module 'sub_bytes' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/sub_bytes.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'sub_bytes' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/sub_bytes.v:7]
-INFO: [Synth 8-6157] synthesizing module 'shift_rows' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/shift_rows.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'shift_rows' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/shift_rows.v:19]
-INFO: [Synth 8-6157] synthesizing module 'mix_columns' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/mix_columns.v:18]
-INFO: [Synth 8-6155] done synthesizing module 'mix_columns' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/mix_columns.v:18]
-INFO: [Synth 8-6157] synthesizing module 'add_round_key' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/add_round_key.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'add_round_key' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/add_round_key.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'aes256_enc_core' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_enc_core.v:16]
-INFO: [Synth 8-6157] synthesizing module 'aes256_encrypt_slave_lite_v1_0_S00_AXI' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:89]
-INFO: [Synth 8-155] case statement is not full and has no default [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:170]
-INFO: [Synth 8-6155] done synthesizing module 'aes256_encrypt_slave_lite_v1_0_S00_AXI' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'aes256_encrypt' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_encrypt.v:24]
+INFO: [Synth 8-6157] synthesizing module 'aes256_encrypt' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_encrypt.v:24]
+INFO: [Synth 8-6157] synthesizing module 'key_man' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_man.v:22]
+INFO: [Synth 8-226] default block is never used [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_man.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'key_man' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_man.v:22]
+INFO: [Synth 8-6157] synthesizing module 'aes256_enc_core' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_enc_core.v:16]
+INFO: [Synth 8-6157] synthesizing module 'key_expasion' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:17]
+INFO: [Synth 8-6157] synthesizing module 's_box' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/s_box.v:9]
+INFO: [Synth 8-226] default block is never used [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/s_box.v:16]
+INFO: [Synth 8-6155] done synthesizing module 's_box' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/s_box.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'key_expasion' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:17]
+INFO: [Synth 8-6157] synthesizing module 'sub_bytes' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/sub_bytes.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'sub_bytes' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/sub_bytes.v:7]
+INFO: [Synth 8-6157] synthesizing module 'shift_rows' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/shift_rows.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'shift_rows' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/shift_rows.v:19]
+INFO: [Synth 8-6157] synthesizing module 'mix_columns' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/mix_columns.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'mix_columns' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/mix_columns.v:18]
+INFO: [Synth 8-6157] synthesizing module 'add_round_key' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/add_round_key.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'add_round_key' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/add_round_key.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'aes256_enc_core' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_enc_core.v:16]
+INFO: [Synth 8-6157] synthesizing module 'aes256_encrypt_slave_lite_v1_0_S00_AXI' [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:89]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:170]
+INFO: [Synth 8-6155] done synthesizing module 'aes256_encrypt_slave_lite_v1_0_S00_AXI' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'aes256_encrypt' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_encrypt.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_aes256_encrypt_0_1' (0#1) [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_aes256_encrypt_0_1/synth/design_1_aes256_encrypt_0_1.v:53]
-WARNING: [Synth 8-7137] Register W_reg[0] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[1] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[2] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[3] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[4] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[5] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[6] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[7] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[8] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[9] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[10] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[11] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[12] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[13] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[14] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[15] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[16] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[17] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[18] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[19] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[20] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[21] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[22] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[23] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[24] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[25] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[26] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[27] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[28] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[29] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[30] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[31] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[32] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[33] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[34] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[35] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[36] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[37] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[38] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[39] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[40] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[41] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[42] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[43] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[44] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[45] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[46] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[47] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[48] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[49] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[50] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[51] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[52] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[53] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[54] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[55] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[56] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[57] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[58] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
-WARNING: [Synth 8-7137] Register W_reg[59] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[0] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[1] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[2] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[3] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[4] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[5] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[6] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[7] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[8] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[9] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[10] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[11] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[12] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[13] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[14] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[15] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[16] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[17] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[18] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[19] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[20] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[21] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[22] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[23] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[24] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[25] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[26] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[27] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[28] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[29] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[30] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[31] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[32] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[33] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[34] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[35] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[36] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[37] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[38] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[39] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[40] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[41] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[42] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[43] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[44] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[45] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[46] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[47] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[48] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[49] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[50] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[51] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[52] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[53] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[54] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[55] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[56] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[57] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[58] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
+WARNING: [Synth 8-7137] Register W_reg[59] in module key_expasion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/key_expasion.v:114]
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module aes256_encrypt_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module aes256_encrypt_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module aes256_encrypt_slave_lite_v1_0_S00_AXI is either unconnected or has no load
@@ -121,50 +123,50 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module aes256_encrypt_slave_lite
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module aes256_encrypt_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port aes_bram_addr[3] in module key_man is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1990.074 ; gain = 518.734 ; free physical = 1214 ; free virtual = 36900
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1990.242 ; gain = 518.797 ; free physical = 478 ; free virtual = 39733
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2007.887 ; gain = 536.547 ; free physical = 1197 ; free virtual = 36892
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2008.055 ; gain = 536.609 ; free physical = 508 ; free virtual = 39743
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2007.887 ; gain = 536.547 ; free physical = 1197 ; free virtual = 36892
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2008.055 ; gain = 536.609 ; free physical = 508 ; free virtual = 39743
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2007.887 ; gain = 0.000 ; free physical = 1202 ; free virtual = 36887
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2008.055 ; gain = 0.000 ; free physical = 514 ; free virtual = 39740
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2155.637 ; gain = 0.000 ; free physical = 1292 ; free virtual = 36979
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2146.805 ; gain = 0.000 ; free physical = 516 ; free virtual = 39744
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2155.637 ; gain = 0.000 ; free physical = 1291 ; free virtual = 36978
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2146.805 ; gain = 0.000 ; free physical = 515 ; free virtual = 39744
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2155.637 ; gain = 684.297 ; free physical = 951 ; free virtual = 36743
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2146.805 ; gain = 675.359 ; free physical = 552 ; free virtual = 39773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2163.641 ; gain = 692.301 ; free physical = 950 ; free virtual = 36744
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2154.809 ; gain = 683.363 ; free physical = 552 ; free virtual = 39773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2163.641 ; gain = 692.301 ; free physical = 950 ; free virtual = 36744
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2154.809 ; gain = 683.363 ; free physical = 551 ; free virtual = 39773
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'key_man'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'key_expasion'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'aes256_enc_core'
-WARNING: [Synth 8-3936] Found unconnected internal register 'axi_araddr_reg' and it is trimmed from '7' to '6' bits. [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/2b3d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:180]
+WARNING: [Synth 8-3936] Found unconnected internal register 'axi_araddr_reg' and it is trimmed from '7' to '6' bits. [/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fa0d/hdl/aes256_encrypt_slave_lite_v1_0_S00_AXI.v:180]
 INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'aes256_encrypt_slave_lite_v1_0_S00_AXI'
 INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'aes256_encrypt_slave_lite_v1_0_S00_AXI'
 ---------------------------------------------------------------------------------------------------
@@ -213,7 +215,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using enc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'aes256_encrypt_slave_lite_v1_0_S00_AXI'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2163.641 ; gain = 692.301 ; free physical = 998 ; free virtual = 36784
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2154.809 ; gain = 683.363 ; free physical = 534 ; free virtual = 39766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -315,37 +317,37 @@ WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module design_1_aes256_encrypt
 WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module design_1_aes256_encrypt_0_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module design_1_aes256_encrypt_0_1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2181.641 ; gain = 710.301 ; free physical = 1786 ; free virtual = 37498
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2179.809 ; gain = 708.363 ; free physical = 459 ; free virtual = 39660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping Report
-+-------------+------------+---------------+----------------+
-|Module Name  | RTL Object | Depth x Width | Implemented As | 
-+-------------+------------+---------------+----------------+
-|s_box        | sbox       | 256x8         | LUT            | 
-|key_expasion | p_0_out    | 256x8         | LUT            | 
-|key_expasion | p_0_out    | 256x8         | LUT            | 
-|key_expasion | p_0_out    | 256x8         | LUT            | 
-|key_expasion | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-|sub_bytes    | p_0_out    | 256x8         | LUT            | 
-+-------------+------------+---------------+----------------+
++-------------+------------------------+---------------+----------------+
+|Module Name  | RTL Object             | Depth x Width | Implemented As | 
++-------------+------------------------+---------------+----------------+
+|s_box        | sbox                   | 256x8         | LUT            | 
+|key_expasion | u_sb3/sbox             | 256x8         | LUT            | 
+|key_expasion | u_sb2/sbox             | 256x8         | LUT            | 
+|key_expasion | u_sb1/sbox             | 256x8         | LUT            | 
+|key_expasion | u_sb0/sbox             | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[14].u_sbox/sbox | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[13].u_sbox/sbox | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[12].u_sbox/sbox | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[11].u_sbox/sbox | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[10].u_sbox/sbox | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[9].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[8].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[7].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[6].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[5].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[4].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[3].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[2].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[1].u_sbox/sbox  | 256x8         | LUT            | 
+|sub_bytes    | g_sbox[0].u_sbox/sbox  | 256x8         | LUT            | 
++-------------+------------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -354,19 +356,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2190.641 ; gain = 719.301 ; free physical = 1687 ; free virtual = 37444
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2189.809 ; gain = 718.363 ; free physical = 422 ; free virtual = 39635
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2194.641 ; gain = 723.301 ; free physical = 1678 ; free virtual = 37435
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2194.809 ; gain = 723.363 ; free physical = 415 ; free virtual = 39637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2221.680 ; gain = 750.340 ; free physical = 1616 ; free virtual = 37384
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2215.855 ; gain = 744.410 ; free physical = 400 ; free virtual = 39613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -384,37 +386,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2363.492 ; gain = 892.152 ; free physical = 1101 ; free virtual = 37142
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.668 ; gain = 891.223 ; free physical = 317 ; free virtual = 39518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2363.492 ; gain = 892.152 ; free physical = 1101 ; free virtual = 37142
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.668 ; gain = 891.223 ; free physical = 317 ; free virtual = 39518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2363.492 ; gain = 892.152 ; free physical = 1167 ; free virtual = 37129
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.668 ; gain = 891.223 ; free physical = 316 ; free virtual = 39518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2363.492 ; gain = 892.152 ; free physical = 1296 ; free virtual = 37132
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.668 ; gain = 891.223 ; free physical = 316 ; free virtual = 39518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2363.492 ; gain = 892.152 ; free physical = 1287 ; free virtual = 37125
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2362.668 ; gain = 891.223 ; free physical = 316 ; free virtual = 39518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2363.492 ; gain = 892.152 ; free physical = 1287 ; free virtual = 37125
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2362.668 ; gain = 891.223 ; free physical = 316 ; free virtual = 39518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -443,33 +445,33 @@ Report Cell Usage:
 |11    |FDRE  |  2097|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2363.492 ; gain = 892.152 ; free physical = 1287 ; free virtual = 37125
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2362.668 ; gain = 891.223 ; free physical = 316 ; free virtual = 39518
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2363.492 ; gain = 744.402 ; free physical = 1286 ; free virtual = 37125
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2363.500 ; gain = 892.152 ; free physical = 1286 ; free virtual = 37125
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2362.668 ; gain = 752.473 ; free physical = 316 ; free virtual = 39518
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2362.676 ; gain = 891.223 ; free physical = 316 ; free virtual = 39518
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2363.500 ; gain = 0.000 ; free physical = 1455 ; free virtual = 37293
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2362.676 ; gain = 0.000 ; free physical = 485 ; free virtual = 39687
 INFO: [Netlist 29-17] Analyzing 1275 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2419.520 ; gain = 0.000 ; free physical = 3041 ; free virtual = 38749
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2418.695 ; gain = 0.000 ; free physical = 505 ; free virtual = 39698
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 622d3da
+Synth Design complete | Checksum: ede91902
 INFO: [Common 17-83] Releasing license: Synthesis
-85 Infos, 76 Warnings, 0 Critical Warnings and 0 Errors encountered.
+87 Infos, 76 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 2419.520 ; gain = 974.996 ; free physical = 3041 ; free virtual = 38749
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1437.103; main = 1429.379; forked = 209.649
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3102.543; main = 2419.523; forked = 920.898
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 2443.531 ; gain = 0.000 ; free physical = 3041 ; free virtual = 38750
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:29 . Memory (MB): peak = 2418.695 ; gain = 1057.754 ; free physical = 505 ; free virtual = 39698
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1633.782; main = 1578.220; forked = 269.417
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3100.699; main = 2418.699; forked = 920.887
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2442.707 ; gain = 0.000 ; free physical = 497 ; free virtual = 39691
 INFO: [Common 17-1381] The checkpoint '/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.runs/design_1_aes256_encrypt_0_1_synth_1/design_1_aes256_encrypt_0_1.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_aes256_encrypt_0_1, cache-ID = ccc5b3c8dedc854a
-INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2443.531 ; gain = 0.000 ; free physical = 2994 ; free virtual = 38707
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_aes256_encrypt_0_1, cache-ID = ade6482da77c75bc
+INFO: [Coretcl 2-1174] Renamed 27 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2442.707 ; gain = 0.000 ; free physical = 480 ; free virtual = 39680
 INFO: [Common 17-1381] The checkpoint '/media/user23/data/TRNG/TRNG_SOC/project_1/project_1.runs/design_1_aes256_encrypt_0_1_synth_1/design_1_aes256_encrypt_0_1.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_aes256_encrypt_0_1_utilization_synth.rpt -pb design_1_aes256_encrypt_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 27 16:41:21 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 14:40:57 2026...

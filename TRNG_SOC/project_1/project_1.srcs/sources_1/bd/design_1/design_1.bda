@@ -220,7 +220,7 @@
                 "SX": "/aes256_encrypt_0",
                 "SI": "S00_AXI",
                 "SS": "S00_AXI_reg",
-                "SV": "user.org:user:aes256_encrypt:1.2",
+                "SV": "user.org:user:aes256_encrypt:1.3",
                 "TM": "both",
                 "TU": "register"
             },
@@ -239,6 +239,24 @@
                 "SI": "S00_AXI",
                 "SS": "S00_AXI_reg",
                 "SV": "user.org:user:myip_trng256:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V6": {
+                "VT": "AC",
+                "BA": "0x43C20000",
+                "HA": "0x43C2FFFF",
+                "BP": "C_S00_AXI_BASEADDR",
+                "HP": "C_S00_AXI_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_aes256_decrypt_0_S00_AXI_reg",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/aes256_decrypt_0",
+                "SI": "S00_AXI",
+                "SS": "S00_AXI_reg",
+                "SV": "user.org:user:aes256_decrypt:1.0",
                 "TM": "both",
                 "TU": "register"
             }
@@ -264,6 +282,11 @@
             },
             {
                 "src": "V5",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V6",
                 "trg": "V2",
                 "EH": "2"
             }

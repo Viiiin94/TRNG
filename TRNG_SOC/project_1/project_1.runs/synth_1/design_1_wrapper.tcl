@@ -72,6 +72,7 @@ set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {/home/user23/.Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
 set_property ip_repo_paths {
+  /media/user23/data/TRNG/TRNG_SOC/aes256_decrypt/aes256_decrypt_1_0
   /media/user23/data/TRNG/TRNG_SOC/ip_repo/trng256_generator/myip_trng256_1_0
   /media/user23/data/TRNG/TRNG_SOC/aes256_encrypt
 } [current_project]
@@ -117,6 +118,12 @@ set_property used_in_implementation false [get_files -all /media/user23/data/TRN
 set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_33/bd_afc3_m02awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_34/bd_afc3_m02wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_35/bd_afc3_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/bd_afc3_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/bd_afc3_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/bd_afc3_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_40/bd_afc3_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_41/bd_afc3_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_42/bd_afc3_m03bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_ooc.xdc]

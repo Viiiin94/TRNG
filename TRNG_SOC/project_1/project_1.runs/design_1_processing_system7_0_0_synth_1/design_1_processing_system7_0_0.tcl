@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "design_1_processing_system7_0_0_synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -70,12 +69,16 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.cache/wt [current_project]
 set_property parent.project_path /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {/home/user23/.Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
-set_property ip_repo_paths /media/user23/data/ip_repo [current_project]
+set_property ip_repo_paths {
+  /media/user23/data/TRNG/TRNG_SOC/aes256_decrypt/aes256_decrypt_1_0
+  /media/user23/data/TRNG/TRNG_SOC/ip_repo/trng256_generator/myip_trng256_1_0
+  /media/user23/data/TRNG/TRNG_SOC/aes256_encrypt
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

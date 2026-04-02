@@ -3,8 +3,8 @@
   "ip_inst": {
     "xci_name": "design_1_aes256_encrypt_0_1",
     "cell_name": "aes256_encrypt_0",
-    "component_reference": "user.org:user:aes256_encrypt:1.2",
-    "ip_revision": "1",
+    "component_reference": "user.org:user:aes256_encrypt:1.3",
+    "ip_revision": "2",
     "gen_directory": "../../../../../../project_1.gen/sources_1/bd/design_1/ip/design_1_aes256_encrypt_0_1",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "1" } ],
+        "IPREVISION": [ { "value": "2" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../project_1.gen/sources_1/bd/design_1/ip/design_1_aes256_encrypt_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -53,6 +53,8 @@
         "bram_clkb": [ { "direction": "out" } ],
         "rand_data": [ { "direction": "in", "size_left": "255", "size_right": "0" } ],
         "rand_valid": [ { "direction": "in" } ],
+        "key_ready_out": [ { "direction": "out" } ],
+        "key_reload_out": [ { "direction": "out" } ],
         "s00_axi_aclk": [ { "direction": "in" } ],
         "s00_axi_aresetn": [ { "direction": "in" } ],
         "s00_axi_awaddr": [ { "direction": "in", "size_left": "6", "size_right": "0" } ],

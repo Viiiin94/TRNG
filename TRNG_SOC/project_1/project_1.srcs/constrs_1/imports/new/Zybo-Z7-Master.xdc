@@ -209,3 +209,12 @@ set_multicycle_path 1 -hold \
            -filter {NAME =~ "*u_sha256*"}] \
     -to   [get_cells -hierarchical \
            -filter {NAME =~ "*u_sha256*"}]
+           
+set_false_path -through [get_nets -hierarchical \
+    -filter {NAME =~ "*g_synth*u_ro*chain*"}]
+
+set_false_path -through [get_nets -hierarchical \
+    -filter {NAME =~ "*g_synth*u_ro*feedback*"}]
+
+set_false_path -through [get_nets -hierarchical \
+    -filter {NAME =~ "*u_bank/ro_out*"}]

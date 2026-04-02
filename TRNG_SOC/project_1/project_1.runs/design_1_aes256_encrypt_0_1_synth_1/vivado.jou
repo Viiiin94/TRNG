@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Mar 27 16:40:48 2026
-# Process ID         : 25353
+# Start of session at: Thu Apr  2 14:40:23 2026
+# Process ID         : 64776
 # Current directory  : /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.runs/design_1_aes256_encrypt_0_1_synth_1
 # Command line       : vivado -log design_1_aes256_encrypt_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_aes256_encrypt_0_1.tcl
 # Log file           : /media/user23/data/TRNG/TRNG_SOC/project_1/project_1.runs/design_1_aes256_encrypt_0_1_synth_1/design_1_aes256_encrypt_0_1.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.4 LTS
 # Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13400
-# CPU Frequency      : 4148.929 MHz
+# CPU Frequency      : 800.329 MHz
 # CPU Physical cores : 10
 # CPU Logical cores  : 16
 # Host memory        : 16496 MB
 # Swap memory        : 32000 MB
 # Total Virtual      : 48496 MB
-# Available Virtual  : 44357 MB
+# Available Virtual  : 42950 MB
 #-----------------------------------------------------------
 source design_1_aes256_encrypt_0_1.tcl -notrace

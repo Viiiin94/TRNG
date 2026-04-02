@@ -47,8 +47,8 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: user.org:user:aes256_encrypt:1.2
-// IP Revision: 1
+// IP VLNV: user.org:user:aes256_encrypt:1.3
+// IP Revision: 2
 
 `timescale 1ns/1ps
 
@@ -63,6 +63,8 @@ module design_1_aes256_encrypt_0_1 (
   bram_clkb,
   rand_data,
   rand_valid,
+  key_ready_out,
+  key_reload_out,
   s00_axi_aclk,
   s00_axi_aresetn,
   s00_axi_awaddr,
@@ -95,6 +97,8 @@ output wire bram_rstb;
 output wire bram_clkb;
 input wire [255 : 0] rand_data;
 input wire rand_valid;
+output wire key_ready_out;
+output wire key_reload_out;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -158,6 +162,8 @@ input wire s00_axi_rready;
     .bram_clkb(bram_clkb),
     .rand_data(rand_data),
     .rand_valid(rand_valid),
+    .key_ready_out(key_ready_out),
+    .key_reload_out(key_reload_out),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),
     .s00_axi_awaddr(s00_axi_awaddr),

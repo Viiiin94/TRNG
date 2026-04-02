@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Fri Mar 27 16:44:22 2026
+//Date        : Thu Apr  2 14:48:43 2026
 //Host        : user23-B80KV-AP35BKE running 64-bit Ubuntu 24.04.4 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=3,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -76,17 +76,18 @@ module design_1
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [31:0]aes256_decrypt_0_bram_addra;
+  wire aes256_decrypt_0_bram_clka;
+  wire aes256_decrypt_0_bram_ena;
   wire [31:0]aes256_encrypt_0_bram_addrb;
   wire aes256_encrypt_0_bram_clkb;
   wire [31:0]aes256_encrypt_0_bram_dinb;
   wire aes256_encrypt_0_bram_enb;
   wire aes256_encrypt_0_bram_rstb;
   wire [3:0]aes256_encrypt_0_bram_web;
-  wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
-  wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
+  wire aes256_encrypt_0_key_ready_out;
+  wire aes256_encrypt_0_key_reload_out;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
-  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
-  wire axi_bram_ctrl_0_BRAM_PORTA_EN;
   wire axi_bram_ctrl_0_BRAM_PORTA_RST;
   wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
   wire [5:0]axi_smc_M00_AXI_ARADDR;
@@ -158,6 +159,26 @@ module design_1
   wire axi_smc_M02_AXI_WREADY;
   wire [3:0]axi_smc_M02_AXI_WSTRB;
   wire axi_smc_M02_AXI_WVALID;
+  wire [6:0]axi_smc_M03_AXI_ARADDR;
+  wire [2:0]axi_smc_M03_AXI_ARPROT;
+  wire axi_smc_M03_AXI_ARREADY;
+  wire axi_smc_M03_AXI_ARVALID;
+  wire [6:0]axi_smc_M03_AXI_AWADDR;
+  wire [2:0]axi_smc_M03_AXI_AWPROT;
+  wire axi_smc_M03_AXI_AWREADY;
+  wire axi_smc_M03_AXI_AWVALID;
+  wire axi_smc_M03_AXI_BREADY;
+  wire [1:0]axi_smc_M03_AXI_BRESP;
+  wire axi_smc_M03_AXI_BVALID;
+  wire [31:0]axi_smc_M03_AXI_RDATA;
+  wire axi_smc_M03_AXI_RREADY;
+  wire [1:0]axi_smc_M03_AXI_RRESP;
+  wire axi_smc_M03_AXI_RVALID;
+  wire [31:0]axi_smc_M03_AXI_WDATA;
+  wire axi_smc_M03_AXI_WREADY;
+  wire [3:0]axi_smc_M03_AXI_WSTRB;
+  wire axi_smc_M03_AXI_WVALID;
+  wire [31:0]blk_mem_gen_0_douta;
   wire [31:0]blk_mem_gen_0_doutb;
   wire [255:0]myip_trng256_0_rand_data_out;
   wire myip_trng256_0_rand_valid_key;
@@ -203,6 +224,34 @@ module design_1
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
 
+  design_1_aes256_decrypt_0_0 aes256_decrypt_0
+       (.bram_addra(aes256_decrypt_0_bram_addra),
+        .bram_clka(aes256_decrypt_0_bram_clka),
+        .bram_douta(blk_mem_gen_0_douta),
+        .bram_ena(aes256_decrypt_0_bram_ena),
+        .key_ready_in(aes256_encrypt_0_key_ready_out),
+        .key_reload_in(aes256_encrypt_0_key_reload_out),
+        .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s00_axi_araddr(axi_smc_M03_AXI_ARADDR),
+        .s00_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .s00_axi_arprot(axi_smc_M03_AXI_ARPROT),
+        .s00_axi_arready(axi_smc_M03_AXI_ARREADY),
+        .s00_axi_arvalid(axi_smc_M03_AXI_ARVALID),
+        .s00_axi_awaddr(axi_smc_M03_AXI_AWADDR),
+        .s00_axi_awprot(axi_smc_M03_AXI_AWPROT),
+        .s00_axi_awready(axi_smc_M03_AXI_AWREADY),
+        .s00_axi_awvalid(axi_smc_M03_AXI_AWVALID),
+        .s00_axi_bready(axi_smc_M03_AXI_BREADY),
+        .s00_axi_bresp(axi_smc_M03_AXI_BRESP),
+        .s00_axi_bvalid(axi_smc_M03_AXI_BVALID),
+        .s00_axi_rdata(axi_smc_M03_AXI_RDATA),
+        .s00_axi_rready(axi_smc_M03_AXI_RREADY),
+        .s00_axi_rresp(axi_smc_M03_AXI_RRESP),
+        .s00_axi_rvalid(axi_smc_M03_AXI_RVALID),
+        .s00_axi_wdata(axi_smc_M03_AXI_WDATA),
+        .s00_axi_wready(axi_smc_M03_AXI_WREADY),
+        .s00_axi_wstrb(axi_smc_M03_AXI_WSTRB),
+        .s00_axi_wvalid(axi_smc_M03_AXI_WVALID));
   design_1_aes256_encrypt_0_1 aes256_encrypt_0
        (.bram_addrb(aes256_encrypt_0_bram_addrb),
         .bram_clkb(aes256_encrypt_0_bram_clkb),
@@ -211,6 +260,8 @@ module design_1
         .bram_enb(aes256_encrypt_0_bram_enb),
         .bram_rstb(aes256_encrypt_0_bram_rstb),
         .bram_web(aes256_encrypt_0_bram_web),
+        .key_ready_out(aes256_encrypt_0_key_ready_out),
+        .key_reload_out(aes256_encrypt_0_key_reload_out),
         .rand_data(myip_trng256_0_rand_data_out),
         .rand_valid(myip_trng256_0_rand_valid_key),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
@@ -237,10 +288,7 @@ module design_1
   (* BMM_INFO_ADDRESS_SPACE = "byte  0x42000000 32 > design_1 blk_mem_gen_0" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   design_1_axi_bram_ctrl_0_0 axi_bram_ctrl_0
-       (.bram_addr_a(axi_bram_ctrl_0_BRAM_PORTA_ADDR),
-        .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
-        .bram_en_a(axi_bram_ctrl_0_BRAM_PORTA_EN),
-        .bram_rddata_a(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+       (.bram_rddata_a({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
         .bram_rst_a(axi_bram_ctrl_0_BRAM_PORTA_RST),
         .bram_we_a(axi_bram_ctrl_0_BRAM_PORTA_WE),
         .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
@@ -347,6 +395,25 @@ module design_1
         .M02_AXI_wready(axi_smc_M02_AXI_WREADY),
         .M02_AXI_wstrb(axi_smc_M02_AXI_WSTRB),
         .M02_AXI_wvalid(axi_smc_M02_AXI_WVALID),
+        .M03_AXI_araddr(axi_smc_M03_AXI_ARADDR),
+        .M03_AXI_arprot(axi_smc_M03_AXI_ARPROT),
+        .M03_AXI_arready(axi_smc_M03_AXI_ARREADY),
+        .M03_AXI_arvalid(axi_smc_M03_AXI_ARVALID),
+        .M03_AXI_awaddr(axi_smc_M03_AXI_AWADDR),
+        .M03_AXI_awprot(axi_smc_M03_AXI_AWPROT),
+        .M03_AXI_awready(axi_smc_M03_AXI_AWREADY),
+        .M03_AXI_awvalid(axi_smc_M03_AXI_AWVALID),
+        .M03_AXI_bready(axi_smc_M03_AXI_BREADY),
+        .M03_AXI_bresp(axi_smc_M03_AXI_BRESP),
+        .M03_AXI_bvalid(axi_smc_M03_AXI_BVALID),
+        .M03_AXI_rdata(axi_smc_M03_AXI_RDATA),
+        .M03_AXI_rready(axi_smc_M03_AXI_RREADY),
+        .M03_AXI_rresp(axi_smc_M03_AXI_RRESP),
+        .M03_AXI_rvalid(axi_smc_M03_AXI_RVALID),
+        .M03_AXI_wdata(axi_smc_M03_AXI_WDATA),
+        .M03_AXI_wready(axi_smc_M03_AXI_WREADY),
+        .M03_AXI_wstrb(axi_smc_M03_AXI_WSTRB),
+        .M03_AXI_wvalid(axi_smc_M03_AXI_WVALID),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
@@ -388,15 +455,15 @@ module design_1
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(proc_sys_reset_0_peripheral_aresetn));
   design_1_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
+       (.addra(aes256_decrypt_0_bram_addra),
         .addrb(aes256_encrypt_0_bram_addrb),
-        .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .clka(aes256_decrypt_0_bram_clka),
         .clkb(aes256_encrypt_0_bram_clkb),
         .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .dinb(aes256_encrypt_0_bram_dinb),
-        .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .douta(blk_mem_gen_0_douta),
         .doutb(blk_mem_gen_0_doutb),
-        .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
+        .ena(aes256_decrypt_0_bram_ena),
         .enb(aes256_encrypt_0_bram_enb),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
         .rstb(aes256_encrypt_0_bram_rstb),
